@@ -24,19 +24,19 @@ public class Solution {
     }
 
     private static double calcNewtone(double[][] table, double x, int n) {
-        double[][] divDif = new double[n + 1][n + 1];
+        double[][] divDif = new double[n + 2][n + 1];
         double result = 0;
         double tmp;
         for (int i = 0; i < n + 1; i++) {
             divDif[0][i] = table[0][i];
             divDif[1][i] = table[1][i];
         }
-        for (int i = 2; i < n + 1; i++) {
+        for (int i = 2; i < n + 2; i++) {
             for (int j = 0; j < n - i + 2; j++) {
                 divDif[i][j] = (divDif[i - 1][j + 1] - divDif[i - 1][j]) / (divDif[0][j + i - 1] - divDif[0][j]);
             }
         }
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n + 1; i++) {
             tmp = divDif[i + 1][0];
             for (int j = 0; j < i; j++) {
                 tmp *= x - divDif[0][j];
