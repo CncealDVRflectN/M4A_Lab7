@@ -58,22 +58,12 @@ public class Solution {
         System.out.print("Y: ");
         printArr(table[1]);
         System.out.println("Интерполяционный многочлен Лагранжа:");
-        System.out.println("n = 3");
-        System.out.println("r*: " + Math.abs(calcLagrange(table, 0.1 / 3, 3) - calcF(0.1 / 3)));
-        System.out.println("r**: " + Math.abs(calcLagrange(table, 0.5 + 0.1 / 3, 3) - calcF(0.5 + 0.1 / 3)));
-        System.out.println("r***: " + Math.abs(calcLagrange(table, 1 - 0.1 / 3, 3) - calcF(1 - 0.1 / 3)));
-        System.out.println("n = 5");
-        System.out.println("r*: " + Math.abs(calcLagrange(table, 0.1 / 3, 5) - calcF(0.1 / 3)));
-        System.out.println("r**: " + Math.abs(calcLagrange(table, 0.5 + 0.1 / 3, 5) - calcF(0.5 + 0.1 / 3)));
-        System.out.println("r***: " + Math.abs(calcLagrange(table, 1 - 0.1 / 3, 5) - calcF(1 - 0.1 / 3)));
+        System.out.println("r*: " + Math.abs(calcLagrange(table, 0.1 / 3, 10) - calcF(0.1 / 3)));
+        System.out.println("r**: " + Math.abs(calcLagrange(table, 0.5 + 0.1 / 3, 10) - calcF(0.5 + 0.1 / 3)));
+        System.out.println("r***: " + Math.abs(calcLagrange(table, 1 - 0.1 / 3, 10) - calcF(1 - 0.1 / 3)));
         System.out.println("Интерполяционный многочлен Ньютона:");
-        System.out.println("n = 3");
-        System.out.println("r*: " + Math.abs(calcNewtone(table, 0.1 / 3, 3) - calcF(0.1 / 3)));
-        System.out.println("r**: " + Math.abs(calcNewtone(table, 0.5 + 0.1 / 3, 3) - calcF(0.5 + 0.1 / 3)));
-        System.out.println("r***: " + Math.abs(calcNewtone(table, 1 - 0.1 / 3, 3) - calcF(1 - 0.1 / 3)));
-        System.out.println("n = 5");
-        System.out.println("r*: " + Math.abs(calcNewtone(table, 0.1 / 3, 5) - calcF(0.1 / 3)));
-        System.out.println("r**: " + Math.abs(calcNewtone(table, 0.5 + 0.1 / 3, 5) - calcF(0.5 + 0.1 / 3)));
-        System.out.println("r***: " + Math.abs(calcNewtone(table, 1 - 0.1 / 3, 5) - calcF(1 - 0.1 / 3)));
+        System.out.println("r*: " + Math.abs(calcNewtone(table, 0.1 / 3, 10) - calcF(0.1 / 3)));
+        System.out.println("r**: " + Math.abs(calcNewtone(table, 0.5 + 0.1 / 3, 10) - calcF(0.5 + 0.1 / 3)));
+        System.out.println("r***: " + Math.abs(calcNewtone(table, 1 - 0.1 / 3, 10) - calcF(1 - 0.1 / 3)));
     }
 }
